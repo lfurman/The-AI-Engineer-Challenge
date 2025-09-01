@@ -27,10 +27,28 @@ Make sure you have these installed:
 - **npm** or **yarn**
 - Your **FastAPI backend** running (check the `api/` folder)
 
+#### Windows Users - Special Notes 🪟
+- **PowerShell or Command Prompt**: Use either PowerShell (recommended) or Command Prompt
+- **Node.js Installation**: Download from [nodejs.org](https://nodejs.org/) - the LTS version is recommended
+- **Git Bash**: If you prefer Unix-like commands, you can use Git Bash (comes with Git for Windows)
+- **Windows Subsystem for Linux (WSL)**: For advanced users who want a Linux environment on Windows
+
 ### Installation
 
 1. **Navigate to the frontend directory:**
    ```bash
+   cd frontend
+   ```
+   
+   **Windows Users**: 
+   ```cmd
+   # In Command Prompt:
+   cd frontend
+   
+   # In PowerShell:
+   cd frontend
+   
+   # In Git Bash:
    cd frontend
    ```
 
@@ -40,6 +58,8 @@ Make sure you have these installed:
    # or if you're a yarn person:
    # yarn install
    ```
+   
+   **Windows Users**: Same commands work in all terminals! 🎯
 
 3. **Start the development server:**
    ```bash
@@ -47,8 +67,12 @@ Make sure you have these installed:
    # or
    # yarn start
    ```
+   
+   **Windows Users**: Same commands work in all terminals! 🎯
 
 4. **Open your browser** and go to `http://localhost:3000`
+   
+   **Windows Users**: Your default browser should open automatically. If not, manually open your preferred browser and navigate to the URL.
 
 ## 🔧 Configuration
 
@@ -60,6 +84,15 @@ The frontend automatically connects to your FastAPI backend at `http://localhost
    ```bash
    # Create a .env file in the frontend directory
    REACT_APP_API_URL=http://your-api-url:port
+   ```
+   
+   **Windows Users**: 
+   ```cmd
+   # In Command Prompt/PowerShell:
+   echo REACT_APP_API_URL=http://your-api-url:port > .env
+   
+   # Or manually create a .env file in the frontend folder
+   # Right-click → New → Text Document → rename to ".env" (with quotes)
    ```
 
 2. **Or modify the default in `src/services/api.js`**
@@ -98,6 +131,8 @@ npm run build
 # yarn build
 ```
 
+**Windows Users**: Same commands work in all terminals! 🎯
+
 This creates an optimized production build in the `build/` folder.
 
 ## 🐛 Troubleshooting
@@ -108,11 +143,34 @@ This creates an optimized production build in the `build/` folder.
 2. **API connection issues**: Make sure your FastAPI backend is running
 3. **Styling not loading**: Check that Tailwind CSS is properly configured
 
+#### Windows-Specific Issues 🪟
+
+4. **"npm is not recognized"**: 
+   - Make sure Node.js is installed and added to PATH
+   - Restart your terminal after installing Node.js
+   - Try running `node --version` to verify installation
+
+5. **Permission errors**: 
+   - Run PowerShell as Administrator if needed
+   - Check Windows Defender isn't blocking npm operations
+   - Ensure your user account has write permissions to the project folder
+
+6. **Port already in use**: 
+   - Use `netstat -ano | findstr :3000` to find what's using port 3000
+   - Kill the process with `taskkill /PID <PID>` or restart your computer
+
 ### Getting Help
 
 - Check the browser console for error messages
 - Verify your API key is correct
 - Ensure your backend is accessible from the frontend
+
+#### Windows Users - Additional Help 🪟
+
+- **Check Windows Event Viewer** for system-level errors
+- **Use Windows Terminal** (available in Microsoft Store) for a better terminal experience
+- **Git Bash** provides a Unix-like environment if you're more comfortable with Linux commands
+- **WSL2** is great for advanced users who want full Linux compatibility
 
 ## 🤝 Contributing
 
