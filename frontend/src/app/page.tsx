@@ -1,10 +1,12 @@
+'use client'
+
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Bot, User, Settings, Sparkles } from 'lucide-react';
-import ChatMessage from './components/ChatMessage';
-import SettingsModal from './components/SettingsModal';
-import { chatWithAI } from './services/api';
+import ChatMessage from '../components/ChatMessage';
+import SettingsModal from '../components/SettingsModal';
+import { chatWithAI } from '../services/api';
 
-function App() {
+export default function HomePage() {
   const [messages, setMessages] = useState([]);
   const [inputMessage, setInputMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -193,5 +195,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

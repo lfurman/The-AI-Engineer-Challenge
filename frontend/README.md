@@ -13,7 +13,9 @@ Welcome to the **coolest** AI chat interface you've ever seen! This React-based 
 
 ## 🛠️ Tech Stack
 
+- **Next.js 14** - The React framework for production with App Router
 - **React 18** - The latest and greatest React features
+- **TypeScript** - Type-safe JavaScript for better development experience
 - **Tailwind CSS** - Utility-first CSS framework for rapid UI development
 - **Lucide React** - Beautiful, customizable icons
 - **Modern JavaScript** - ES6+ features and async/await patterns
@@ -63,9 +65,9 @@ Make sure you have these installed:
 
 3. **Start the development server:**
    ```bash
-   npm start
+   npm run dev
    # or
-   # yarn start
+   # yarn dev
    ```
    
    **Windows Users**: Same commands work in all terminals! 🎯
@@ -73,6 +75,8 @@ Make sure you have these installed:
 4. **Open your browser** and go to `http://localhost:3000`
    
    **Windows Users**: Your default browser should open automatically. If not, manually open your preferred browser and navigate to the URL.
+   
+   **Note**: Next.js will automatically open your browser when you run `npm run dev`!
 
 ## 🔧 Configuration
 
